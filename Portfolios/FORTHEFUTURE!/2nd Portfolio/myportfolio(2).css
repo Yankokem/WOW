@@ -217,17 +217,19 @@ html {
 
 .projects-item{
     background-color: #efeee9;
-    border: 2px solid #ca9335;
     border-radius: 10px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
     overflow: hidden;
-    transition: transform .2s;
+    transition: transform 0.3s ease-out, border 0.2s ease;
+    box-shadow: 2px 5px 10px 5px rgba(0, 0, 0, 0.19);
+    border: 2px solid transparent;
 }
 
 .projects-item:hover{
+    border: 2px solid #ca9335;
     transform: scale(1.03);
 }
 
@@ -245,7 +247,6 @@ html {
 }
 
 .experiences h1{
-    
     margin-bottom: 25px;
     margin-top: 50px;
     font-size: 50px;
@@ -258,6 +259,7 @@ html {
 
 .child{
     margin: 20px 20px 20px 0 ;
+    color: #5f410d;
 }
 
 .contents .parent{
@@ -330,7 +332,7 @@ html {
 .skills-container .front {
     background: #efeee9;
     border: 3px solid #ca9335;
-    color: #333;
+    color: #ca9335;
 }
 
 .skills-container .back {
@@ -380,13 +382,13 @@ form, .named, .emaild, .messaged{
 form label{
     font-size: 15;
     margin: 13px 0;
+    color: #5f410d;
 }
 
 form input{
     font-size: 15px;
 }
 
-/* Base styles */
 form input,
 form textarea {
     padding: 13px;
@@ -415,9 +417,10 @@ form textarea{
 form .button{
     align-self: flex-end;
     padding: 13px 0;
+    
 }
 
-.button .send{
+.button .send {
     color: #efeee9;
     padding: 14px 40px;
     font-size: 15px;
@@ -426,6 +429,19 @@ form .button{
     border: 1px solid;
     border-radius: 10px;
     box-shadow: 0px 5px 1px 1px #553806;
+    transition: all 0.2s ease;
+    position: relative;
+    top: 0;
+}
+
+.button .send:hover {
+    top: -2px;
+    box-shadow: 0px 7px 1px 1px #553806;
+}
+
+.button .send:active {
+    top: 3px;
+    box-shadow: 0px 2px 1px 1px #553806;
 }
 
 
